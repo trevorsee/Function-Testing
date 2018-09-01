@@ -4,6 +4,7 @@ export function handler(event, context, callback) {
     statusCode: 200,
     body: JSON.stringify({
       headers: event.headers,
+      ip: event.headers["client-ip"],
       msg: "Hello, World!"
     })
   });

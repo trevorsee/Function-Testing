@@ -15,7 +15,12 @@ class LambdaDemo extends Component {
     fetch("/.netlify/functions/hello")
       .then(response => response.json())
       .then(json =>
-        this.setState({ loading: false, total: json, msg: json.msg })
+        this.setState({
+          loading: false,
+          total: json,
+          msg: json.msg,
+          ip: json.ip
+        })
       );
   };
 
@@ -29,6 +34,8 @@ class LambdaDemo extends Component {
         </button>
         <br />
         <span>{msg}</span>
+        <br />
+        <span>ip: {ip}</span>
       </p>
     );
   }
