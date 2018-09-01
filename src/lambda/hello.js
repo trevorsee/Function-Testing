@@ -1,5 +1,3 @@
-var geoip = require("geoip-lite");
-
 export function handler(event, context, callback) {
   console.log(event);
   const ip = event.headers["client-ip"];
