@@ -10,6 +10,7 @@ export function handler(event, context, callback) {
     body: JSON.stringify({
       headers: event.headers,
       ip: ip,
+      geo: "geo",
       msg: "Hello, World!"
     })
   });
