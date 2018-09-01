@@ -1,7 +1,10 @@
 export function handler(event, context, callback) {
-  console.log(event)
+  console.log(event);
   callback(null, {
     statusCode: 200,
-    body: JSON.stringify({msg: "Hello, World!"})
-  })
+    body: JSON.stringify({
+      headers: event.headers,
+      msg: "Hello, World!"
+    })
+  });
 }
