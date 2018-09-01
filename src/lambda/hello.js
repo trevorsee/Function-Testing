@@ -1,4 +1,4 @@
-import geoip from "geoip-lite";
+var geoip = require("geoip-lite");
 
 export function handler(event, context, callback) {
   console.log(event);
