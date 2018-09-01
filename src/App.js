@@ -19,13 +19,14 @@ class LambdaDemo extends Component {
           loading: false,
           total: json,
           msg: json.msg,
-          ip: json.ip
+          ip: json.ip,
+          geo: json.geo
         })
       );
   };
 
   render() {
-    const { loading, msg, ip } = this.state;
+    const { loading, msg, ip, geo } = this.state;
 
     return (
       <p>
@@ -36,6 +37,8 @@ class LambdaDemo extends Component {
         <span>{msg}</span>
         <br />
         <span>ip: {ip}</span>
+        <br />
+        <span>geo: {geo}</span>
       </p>
     );
   }
