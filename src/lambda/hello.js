@@ -1,7 +1,10 @@
+var geoip = require("geoip-lite");
+
 export function handler(event, context, callback) {
   console.log(event);
   const ip = event.headers["client-ip"];
-  // const geo = geoip.lookup(ip);
+  const geo = geoip.lookup(ip);
+  console.log(geo);
 
   callback(null, {
     statusCode: 200,
