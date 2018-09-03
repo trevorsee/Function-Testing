@@ -29,7 +29,10 @@ exports.handler = async (event, context) => {
     .then(response => response.json())
     .then(data => ({
       statusCode: 200,
-      body: `${data.setup} ${data.punchline} *BA DUM TSSS*`
+      body: JSON.stringify({
+        headers: event.headers,
+        msg: `${data.setup} ${data.punchline} *BA DUM TSSS*`
+      })
     }))
     .catch(error => ({ statusCode: 422, body: String(error) }));
 };
