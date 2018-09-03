@@ -17,10 +17,7 @@ class LambdaDemo extends Component {
       .then(json =>
         this.setState({
           loading: false,
-          total: json,
-          msg: json.msg,
-          ip: json.ip,
-          geo: json.geo
+          msg: json
         })
       );
   };
@@ -35,10 +32,6 @@ class LambdaDemo extends Component {
         </button>
         <br />
         <span>{msg}</span>
-        <br />
-        <span>ip: {ip}</span>
-        <br />
-        <span>geo: {geo}</span>
       </p>
     );
   }
