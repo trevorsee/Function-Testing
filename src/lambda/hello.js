@@ -44,7 +44,6 @@ var iplocation = require("iplocation");
 
 exports.handler = async (event, context) => {
   return iplocation("56.70.97.8")
-    .then(response => response.json())
     .then(data => ({
       statusCode: 200,
       body: JSON.stringify({
