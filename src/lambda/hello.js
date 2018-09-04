@@ -43,12 +43,12 @@
 var iplocation = require("iplocation");
 
 exports.handler = async (event, context) => {
-  return iplocation("56.70.97.8")
+  return iplocation(event.headers["client-ip"])
     .then(data => ({
       statusCode: 200,
       body: JSON.stringify({
         headers: event.headers,
-        msg: data
+        loc: data
       })
     }))
     .catch(error => ({ statusCode: 422, body: String(error) }));
