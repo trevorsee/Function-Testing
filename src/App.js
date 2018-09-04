@@ -17,7 +17,8 @@ class LambdaDemo extends Component {
       .then(json =>
         this.setState({
           loading: false,
-          msg: json.msg
+          msg: json.msg,
+          headers: json.headers
         })
       );
   };
