@@ -3,6 +3,7 @@
   "version": "0.3.0",
   "private": true,
   "dependencies": {
+    "firebase-admin": "^6.0.0",
     "fs": "^0.0.1-security",
     "geoip-lite": "^1.3.2",
     "iplocation": "^5.0.1",

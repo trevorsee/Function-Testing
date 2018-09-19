@@ -40,7 +40,15 @@
 //     .catch(error => ({ statusCode: 422, body: String(error) }));
 // };
 
-var iplocation = require("iplocation");
+const iplocation = require("iplocation");
+const admin = require("firebase-admin");
+const serviceAccount = require("./account.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount)
+});
+
+const db = admin.firestore();
 
 exports.handler = async (event, context) => {
   return iplocation(event.headers["client-ip"])

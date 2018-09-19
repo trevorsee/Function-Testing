@@ -32,7 +32,7 @@ class LambdaDemo extends Component {
           {loading ? "Loading..." : "Call Lambda"}
         </button>
         <br />
-        <span>{msg}</span>
+        <span>{console.log(msg)}</span>
       </p>
     );
   }
